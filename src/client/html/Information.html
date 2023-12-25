@@ -9,6 +9,7 @@
     <link href="../css/starsRating.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="../css/popup.css" rel="stylesheet">
+    <link href="../css/InfoStyles.css" rel="stylesheet">
     <title>Location</title>
 </head>
 <body>
@@ -53,7 +54,7 @@
         </label>
         <input type="number" id="original" step="0.01" min="0" name="money" required>
         <!-- double-headed arrow is unicode &#2194;-->
-        <button id="switchCurrency" style="background-color: red" type = "button">Switch</button>
+        <button id="switchCurrency" class="btn btn-outline-secondary" type = "button">Switch</button>
         <label for="result">
             <select id="convertedCurrency">
                 <option selected value="NONE">No Currency Selected</option>
@@ -61,7 +62,7 @@
             </select>
         </label>
         <input type="text" id="result">
-        <input type="submit">
+        <input type="submit" class="btn btn-primary">
     </form>
 </div>
 
@@ -100,9 +101,8 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="../js/main.js"></script>
 <script src="../js/getInfo.js"></script>
-<script src="../js/itinerary.js"></script>
 <script src="../js/fiveStarRating.js"></script>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDOR2kWa1A79F6iLOtuExM5W-TKVXHMrA&callback=getCountryCoordinates" async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDOR2kWa1A79F6iLOtuExM5W-TKVXHMrA&callback=googleMapsApiCallback" async defer></script>
 </body>
 </html>

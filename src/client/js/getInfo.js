@@ -33,7 +33,7 @@ function displayCurrency(currency)
         }
     });
 }
-// Function to create the map; called by the Google Maps API
+// Function to create the map
 function initMap(coord_lat, coord_long) {
     let loc;
     $(document).ready(
@@ -56,10 +56,14 @@ function initMap(coord_lat, coord_long) {
     }
 
 }
-getCountryCoordinates(function(coord_lat, coord_long) {
-    initMap(coord_lat, coord_long);
-    // Continue with other asynchronous operations if needed
-});
+// function to create a map using the coordinates of the country
+// This function is specifically created as a function so that the google maps api can call it
+function googleMapsApiCallback() {
+    getCountryCoordinates(function (coord_lat, coord_long) {
+        initMap(coord_lat, coord_long);
+        // Continue with other asynchronous operations if needed
+    });
+}
 let user;
 $(document).ready(function () {
     function getQueryParam(name) {
@@ -180,8 +184,8 @@ $(document).ready(function () {
         }
 
         // If there's data
-        let cn = "";
-        let cd = "";
+        let cn = ""; //country name
+        let cd = ""; //country description
         let tableHtml = "";
         //object stores reviews by activity id
         const reviewsByActivity = {};
