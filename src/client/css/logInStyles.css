@@ -37,11 +37,13 @@ body main {
 h1 {
 	color: blue;
 }
+/*
 label {
 	float: left;
     width: 11em;
     text-align: right;
 }
+ */
 input {
     margin-left: 1em;
 	margin-right: 1em;
@@ -51,3 +53,13 @@ input {
 span {
     color: red;
 }
+.button-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.left-button, .right-button{
+    padding: 10px;
+    text-align: center;
+}
+

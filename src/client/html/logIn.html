@@ -41,14 +41,14 @@
          <h1>Log In</h1>
         <div id="errorMessage" style="color:red"></div>
         <form id="logIn_form" name="logIn_form" action="../../server/login.php" method="POST">
-            <label for="user_name">Enter your username:</label>
-            <input type="text" id="user_name" name="email" placeholder="example@gmail.com">
+            <label for="user_name" class="form-label">Enter your username:</label>
+            <input type="text" id="user_name" name="email" placeholder="example@gmail.com" class="form-control">
 
-            <label for="password">Please enter your password:</label>
-            <input type="password" id="password" name="password" required>
+            <label for="password" class="form-label">Please enter your password:</label>
+            <input type="password" id="password" name="password" required class="form-control">
 
             <label>&nbsp;</label>
-            <input type="submit" id="submit" value="Submit">
+            <input type="submit" id="submit" value="Submit" class="btn btn-primary">
             <br>
             <p>Don't have an account? <a href="create_account.html">Create one</a></p>
         </form>

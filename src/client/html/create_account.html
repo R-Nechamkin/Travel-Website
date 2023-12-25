@@ -40,22 +40,19 @@
     <h1>Create an Account</h1>
     <div id="message" style="color:red"></div>
     <form id="createAccountForm" name="createAccountForm" action="../../server/newAccount.php" method="POST">
-        <label for="email">Enter Your Email:</label>
-        <input type="email" placeholder="Example@gmail.com" id="email" name="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required>
-        <span>*</span><br>
+        <label for="email" class="form-label">Enter Your Email: <span>*</span></label>
+        <input type="email" placeholder="Example@gmail.com" id="email" name="email" class="form-control" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required>
 
-        <label for="fname">First Name:</label>
-        <input type="text" id="fname" name="fname" required>
-        <span>*</span>
+        <label for="fname" class="form-label">First Name: <span>*</span></label>
+        <input type="text" id="fname" name="fname" required class="form-control">
 
-        <label for="lname">Last Name:</label>
-        <input type="text" id="lname" name="lname" required>
-        <span>*</span><br>
+        <label for="lname" class="form-label">Last Name: <span>*</span></label>
+        <input type="text" id="lname" name="lname" required class="form-control">
 
-        <label for="homeCountry">Home Country:</label>
-        <select id="homeCountry" name="homeCountry">
+        <label for="homeCountry" class="form-label">Home Country: <span>*</span></label>
+        <select id="homeCountry" name="homeCountry" class="form-select" aria-label="select-home-country">
             <option value="1">Israel</option>
-            <option value="2">United States</option>
+            <option value="2" selected>United States</option>
             <option value="4">Britain</option>
             <option value="5">Britain</option>
             <option value=7">Canada</option>
@@ -66,18 +63,19 @@
             <option value="12">Switzerland</option>
         </select>
         <br>
-        <label for="password1">Please enter your password:</label>
-        <input type="password" id="password1" name="password1" required>
-        <span>*</span><br>
+        <label for="password1" class="form-label">Please enter your password: <span>*</span></label>
+        <input type="password" id="password1" name="password1" required class="form-control">
+        <label for="password2" class="form-label">Please re-enter your password: <span>*</span></label>
+        <input type="password" id="password2" name="password2" required class="form-control">
         <br>
-        <label for="password2">Please re-enter your password:</label>
-        <input type="password" id="password2" name="password2" required>
-        <span>*</span><br>
 
         <label>&nbsp;</label>
-        <button id="join_list">Create Account</button>
+        <div class="button-container">
+            <button id="join_list" class="btn btn-primary left-button">Create Account</button>
+            <a href="logIn.html"><button id="goToLogin" type="button" class="btn btn-outline-secondary btn-sm right-button">Go to Login Page</button></a>
+        </div>
+
     </form>
-    <a href="logIn.html"><button id="goToLogin">Go to Login Page</button></a>
 </main>
 <script>
     $(document).ready(function () {
