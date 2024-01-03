@@ -15,7 +15,7 @@
 <body>
 <header>
     <nav style="height: 15vh;" class="navbar navbar-expand-lg navbar-light bg-light bg-body-tertiary">
-        <div class="container-fluid">
+        <div class="container-fluid mt-5">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -41,22 +41,22 @@
 </header>
 
 <div class="container">
-    <div id="country">
-        <h1></h1>
+    <div id="country" class="mt-5">
+        <h1 class = "display-4 text-primary"></h1>
     </div>
     <div id="description">
-        <p><em></em></p>
+        <p class = "lead text-muted"><em></em></p>
     </div>
     <form id="currencyConverter" style="padding-top: 15vh">
         <label for="original">
-            <select id="baseCurrency">
+            <select id="baseCurrency" class = "form-select form-select-sm">
             </select>
         </label>
         <input type="number" id="original" step="0.01" min="0" name="money" required>
         <!-- double-headed arrow is unicode &#2194;-->
-        <button id="switchCurrency" class="btn btn-outline-secondary" type = "button">Switch</button>
+        <button id="switchCurrency" class="btn btn-primary" type = "button">Switch</button>
         <label for="result">
-            <select id="convertedCurrency">
+            <select id="convertedCurrency" class="form-select form-select-sm">
                 <option selected value="NONE">No Currency Selected</option>
                 <!-- Add other currency options -->
             </select>
