@@ -8,9 +8,8 @@ nav{
     height: 15vh;
 }
 
-#countrySearch {
-    margin-top: 20px;
-    margin-bottom: 20px;
+#searchBar {
+    margin-left: 2vw;
 }
 
 #searchResults {
@@ -18,6 +17,9 @@ nav{
 }
 .country-search-result {
     cursor: pointer;
+}
+.country-search-result:hover{
+    background-color: lightskyblue;
 }
 
 #countrySearch {

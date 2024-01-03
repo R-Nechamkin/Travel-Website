@@ -72,6 +72,9 @@ $(document).ready(function() {
         ];
 
         function filterCountries(searchTerm) {
+            if(searchTerm === ""){
+                return [];
+            }
             return countries.filter((country) =>
                 country.name.toLowerCase().includes(searchTerm.toLowerCase())
             );
@@ -81,8 +84,6 @@ $(document).ready(function() {
             const resultsContainer = $("#searchResults");
             resultsContainer.empty();
 
-            const resultList = $("<ul>").addClass("list-group");
-
             results.forEach((result) => {
                 const resultItem = $("<li>")
                     .addClass("list-group-item country-search-result")
@@ -91,7 +92,6 @@ $(document).ready(function() {
 
                 resultsContainer.append(resultItem);
             });
-            resultsContainer.append(resultList);
         }
 
         $("#countrySearch").on("input", function () {
